@@ -16,6 +16,10 @@ img{
     height: 100%;
 }
 
+i{
+    cursor: pointer;
+}
+
 .h_100{
     height: 100%;
 }
@@ -81,10 +85,6 @@ img{
 }
 
 /* parte a sinistra */
-
-.row.m-0 > section{
-    width: 100%;
-}
 
 .h_notifications{
     height: 5rem;
