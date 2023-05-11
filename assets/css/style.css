@@ -1,5 +1,31 @@
+/* css su tutta la pagina */
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+body{
+    background: linear-gradient(to bottom, #009688 20%, #dbdbd2 20%);
+    height: 100vh;
+}
+
+/* css main */
+
+.h_structure{
+    min-height: 920px;
+}
+
+.h_user{
+    height: 4,25rem;
+}
+
+.user_ > img{
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+}
+
+.option_symbol{
+    color: #b1b1b1;
 }
