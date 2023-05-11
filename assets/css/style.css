@@ -6,7 +6,7 @@
 }
 
 body{
-    background: no-repeat linear-gradient(to bottom, #009688 15%, #dbdbd2 15%);
+    background: no-repeat linear-gradient(to bottom, #009688 20%, #dbdbd2 20% 80%);
     height: 100vh;
 }
 
@@ -17,10 +17,6 @@ img{
 
 .h_100{
     height: 100%;
-}
-
-.overflow_y{
-    overflow-y: auto;
 }
 
 .grey_{
