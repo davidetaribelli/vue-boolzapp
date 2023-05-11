@@ -6,8 +6,13 @@
 }
 
 body{
-    background: no-repeat linear-gradient(to bottom, #009688 20%, #dbdbd2 20%);
+    background: no-repeat linear-gradient(to bottom, #009688 15%, #dbdbd2 15%);
     height: 100vh;
+}
+
+img{
+    width: 100%;
+    height: 100%;
 }
 
 .h_100{
@@ -15,12 +20,25 @@ body{
 }
 
 .overflow_y{
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .grey_{
     color: #b1b1b1;
 }
+
+.lightblue_{
+    color: #8edafc;
+}
+
+.bg_lightblue_{
+    background-color: #8edafc;
+}
+
+.bg_grey_{
+    background-color: #b1b1b1;
+}
+
 
 .bg_whatsapp{
     background-image: url("../../img/mine.jpg");
@@ -66,4 +84,19 @@ body{
 
 .input-group > span > i{
     width: 50px;
+}
+
+/* parte a sinistra */
+
+.row.m-0 > section{
+    width: 100%;
+}
+
+.h_notifications{
+    height: 5rem;
+}
+
+.h_notifications > div.rounded-circle{
+    width: 3rem;
+    height: 3rem;
 }

@@ -15,11 +15,12 @@
     <main>
         <div id="app" class="container my-3 mx-auto">
             <div class="row">
-                <div class="col-5 bg-primary h_structure m-0 p-0">
-                    <div class="row">
+                <!-- sinistra -->
+                <div class="col-5 bg-light h_structure m-0 p-0">
+                    <div class="row m-0">
                         <!-- lo utilizzo per la parte alta sx-->
-                        <div class="h_user">
-                            <nav class="navbar bg-light ">
+                        <section>
+                            <nav class="navbar bg-light">
                                 <div class="container-fluid justify-content-between">
                                     <div class="user_ align-items-center">
                                         <img src="./img/avatar_io.jpg" alt="io">
@@ -38,9 +39,47 @@
                                     </div>
                                 </div>
                             </nav>
-                        </div>  
+                        </section>
+                        <!-- campana e notifiche desktop -->
+                        <section class="d-flex align-items-center bg_lightblue_ p-4 h_notifications">
+                            <div class="d-flex align-items-center justify-content-center text-white border rounded-circle p-3 bg-light me-3">
+                                <i class="fa-solid fa-bell-slash fs-4 lightblue_"></i>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center">
+                                <span> Ricevi notifiche di nuovi messaggi</span>
+                                <small class="text-decoration-underline grey_">Attiva notifiche desktop</small>
+                            </div>
+                        </section>
+                        <!-- cerca messaggi o nuova chat -->
+                        <section class="p-0">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text bg-light border-0 rounded-0" id="addon-wrapping">
+                                    <i class="fa-solid fa-magnifying-glass grey_"></i>
+                                </span>
+                                <input type="text" class="form-control rounded-0 border-0 p-3" placeholder="Cerca o inserisci una nuova chat" aria-label="Username" aria-describedby="addon-wrapping">
+                            </div>
+                        </section>
+                        <!-- chat -->
+                        <section class="overflow_y bg-light p-3">
+                            <div v-for="(contact, i) in contacts" class="d-flex flex-column">
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-2 d-flex justify-content-center align-items-center p-1">
+                                        <img :src="contact.avatar" alt="contact.name" class="rounded-circle">
+                                    </div>
+                                    <div class="col-9 d-flex flex-column justify-content-center fs-5">
+                                        {{contact.name}}
+                                        <small class="mt-1 grey_">{{contact.messages[contact.messages.length-1].message}}</small>
+                                    </div>
+                                    <div class="col-1 d-flex align-items-center">
+                                        <small>12:00</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                          
                     </div>
                 </div>
+                <!-- destra -->
                 <div class="col-7 bg_whatsapp h_structure m-0 p-0">
                     <div class="h_100">
                         <!-- lo utilizzo per la parte alta sx-->
@@ -50,7 +89,7 @@
                                     <div class="user_ d-flex align-items-center">
                                         <img src="./img/avatar_1.jpg" alt="io">
                                         <div class="info_ ms-3 d-flex flex-column">
-                                            <label> Michele </label>
+                                            <label> {{contacts[currentFriend].name}} </label>
                                             <small class="grey_"> Ultimo accesso oggi alle 12:00 </small>
                                         </div>
                                     </div>
@@ -68,7 +107,7 @@
                                 </div>
                             </nav>
                         </div> 
-
+                        <!-- parte dei messaggi -->
                         <div class="overflow_y h_messages p-4">
                             <div class="row">
                                 <div class="sender_ d-flex flex-column align-items-end p-0">
@@ -80,14 +119,14 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- scrivere il messaggio -->
                         <div class="h_write_message d-flex align-items-center">
                             <div class="input-group h_100">
-                                <span class="input-group-text bg-light border-0" id="basic-addon1">
+                                <span class="input-group-text bg-light border-0 rounded-0" id="basic-addon1">
                                     <i class="fa-regular fa-face-laugh grey_ fs-5"></i>
                                 </span>
                                 <input type="text" class="form-control border-0" placeholder="Scrivi un messaggio" aria-label="Username" aria-describedby="basic-addon1">
-                                <span class="input-group-text bg-light border-0" id="basic-addon1">
+                                <span class="input-group-text bg-light border-0 rounded-0" id="basic-addon1">
                                     <i class="fa-solid fa-microphone grey_ fs-5"></i>
                                 </span>
                               </div>
