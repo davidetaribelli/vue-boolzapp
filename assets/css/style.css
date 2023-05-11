@@ -7,7 +7,23 @@
 
 body{
     background: linear-gradient(to bottom, #009688 20%, #dbdbd2 20%);
-    height: 100vh;
+    height: 100%;
+}
+
+.h_100{
+    height: 100%;
+}
+
+.overflow_y{
+    overflow-y: scroll;
+}
+
+.grey_{
+    color: #b1b1b1;
+}
+
+.bg_whatsapp{
+    background-image: url("../../img/mine.jpg");
 }
 
 /* css main */
@@ -17,7 +33,7 @@ body{
 }
 
 .h_user{
-    height: 4,25rem;
+    height: 4.25em;
 }
 
 .user_ > img{
@@ -26,6 +42,28 @@ body{
     border-radius: 50%;
 }
 
-.option_symbol{
-    color: #b1b1b1;
+
+/* parte a destra */
+
+.h_messages{
+    height: calc(100% - 8.50em);
+}
+
+.sender_ > div {
+    background-color: #d5f9ba;
+    width: 300px;
+}
+
+.recipient_ > div {
+    background-color: #eaeaea;
+    width: 300px;
+}
+
+
+.h_write_message{
+    height: 4.25rem;
+}
+
+.input-group > span > i{
+    width: 50px;
 }
