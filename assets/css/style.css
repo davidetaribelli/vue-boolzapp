@@ -8,7 +8,6 @@
 
 body{
     background: no-repeat linear-gradient(to bottom, #009688 20%, #dbdbd2 20% 80%);
-    height: 100vh;
 }
 
 img{
@@ -98,4 +97,5 @@ i{
 #contact > div{
     background-color: #fff;
     border-top: 1px solid lightgray;
+    height: 100%;
 }
