@@ -94,8 +94,13 @@ i{
     height: 3rem;
 }
 
+#contact{
+    height: calc(100% - 220px);
+    overflow-y: scroll;
+}
+
 #contact > div{
     background-color: #fff;
     border-top: 1px solid lightgray;
-    height: 100%;
+    height: calc(100% / 8);
 }
