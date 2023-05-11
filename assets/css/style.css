@@ -5,6 +5,7 @@
     margin: 0;
 }
 
+
 body{
     background: no-repeat linear-gradient(to bottom, #009688 20%, #dbdbd2 20% 80%);
     height: 100vh;
@@ -42,9 +43,6 @@ img{
 
 /* css main */
 
-.h_structure{
-    min-height: 920px;
-}
 
 .h_user{
     height: 4.25em;
@@ -95,4 +93,9 @@ img{
 .h_notifications > div.rounded-circle{
     width: 3rem;
     height: 3rem;
+}
+
+#contact > div{
+    background-color: #fff;
+    border-top: 1px solid lightgray;
 }

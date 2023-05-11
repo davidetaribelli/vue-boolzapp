@@ -18,10 +18,9 @@
         <div class="container my-3 mx-auto h_100 p-0">
             <div class="row">
                 <!-- sinistra -->
-                <div class="col-5 bg-light h_structure m-0 p-0">
-                    <div class="row m-0">
+                <div class="col-5 bg-light m-0 p-0">
+                    <div class="row flex-column m-0">
                         <!-- lo utilizzo per la parte alta sx-->
-                        <section>
                             <nav class="navbar bg-light">
                                 <div class="container-fluid justify-content-between">
                                     <div class="user_ align-items-center">
@@ -41,7 +40,6 @@
                                     </div>
                                 </div>
                             </nav>
-                        </section>
                         <!-- campana e notifiche desktop -->
                         <section class="d-flex align-items-center bg_lightblue_ p-4 h_notifications">
                             <div
@@ -65,7 +63,7 @@
                             </div>
                         </section>
                         <!-- chat -->
-                        <section class="overflow-y-auto bg-light p-3">
+                        <section id="contact" class="overflow-y-auto bg-light p-0">
                             <div v-for="(contact, i) in contacts" class="d-flex flex-column">
                                 <div class="d-flex justify-content-between">
                                     <div class="col-2 d-flex justify-content-center align-items-center p-1">
@@ -86,7 +84,7 @@
                     </div>
                 </div>
                 <!-- destra -->
-                <div class="col-7 bg_whatsapp h_structure m-0 p-0">
+                <div class="col-7 bg_whatsapp m-0 p-0">
                     <div class="h_100">
                         <!-- lo utilizzo per la parte alta sx-->
                         <div class="h_user">
