@@ -166,8 +166,21 @@ const { createApp } = Vue
                     }
                 ],
             }
-        ]
+        ],
+        
         
       }
-    }
+    },
+    methods: {
+        changeChat(i){
+            this.clicked = false;
+            this.currentFriend = i;
+            
+            if(this.clicked == false){
+                this.clicked = true;
+            }
+        }
+    },
+
+    
   }).mount('#app')
