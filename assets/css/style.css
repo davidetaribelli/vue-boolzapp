@@ -73,14 +73,21 @@ i{
     height: calc(100% - 8.50em);
 }
 
-.sender_ > div {
-    background-color: #d5f9ba;
+.h_messages >  div{
     width: 300px;
+    padding: 1em;
+    border-radius: 1rem;
+    margin: 1rem;
 }
 
-.recipient_ > div {
+.sender_ {
+    background-color: #d5f9ba;
+    align-self: flex-end;
+}
+
+.recipient_{
     background-color: #eaeaea;
-    width: 300px;
+    align-self: flex-start;
 }
 
 
