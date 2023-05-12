@@ -1,9 +1,9 @@
 const { createApp } = Vue
-
+var currentChat;
   createApp({
     data() {
       return {
-        currentFriend: 0,
+        
         contacts: [ 
             {
                 name: 'Michele',
@@ -143,6 +143,7 @@ const { createApp } = Vue
                         status: 'received'
                     }
                 ],
+                
             },
             {
                 name: 'Davide',
@@ -167,18 +168,54 @@ const { createApp } = Vue
                 ],
             }
         ],
+        currentFriend: 0,
         
+        
+        addMsg: {
+            date: '12/05/2023 15:47:00',
+            message:'',
+            status:'sent'
+        },
+
+        answer: {
+            date: '12/05/2023 15:47:00',
+            message:'ok!',
+            status:'received'
+        }
+    
         
       }
     },
     methods: {
         changeChat(i){  
             this.currentFriend = i;
+            currentChat = this.currentFriend;
+        },
+
+        addMessage(){
+            if(currentChat === undefined){
+                currentChat = 0;
+            }
+            let newMsg = {...this.addMsg}
+            if(this.addMsg.message.length >= 1 ){
+                this.contacts[currentChat].messages.push(newMsg);
+                this.addMsg.message = "";
+                const secOfAnswer = setInterval(this.addAnswer, 1000);
+                setTimeout (() =>{
+                    clearInterval(secOfAnswer);
+                }, 1000)
+                   
+                
+            }
+        },
+        addAnswer(){
+            let answerEl = {...this.answer}
+            this.contacts[currentChat].messages.push(answerEl);
         },
 
         
+        
     },
 
-    
     
   }).mount('#app')
