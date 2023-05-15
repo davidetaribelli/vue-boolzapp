@@ -5,7 +5,6 @@
     margin: 0;
 }
 
-
 body{
     background: no-repeat linear-gradient(to bottom, #009688 20%, #dbdbd2 20% 80%);
     height: 100%;
@@ -16,57 +15,31 @@ img{
     height: 100%;
 }
 
-input{
-    box-shadow: none !important;
-}
+input       {box-shadow: none !important;}
 
-i{
-    cursor: pointer;
-}
+i           {cursor: pointer;}
 
-.h_100{
-    height: 100%;
-}
+.h_100      {height: 100%;}
 
-.w_100{
-    width: 100%;
-}
+.w_100      {width: 100%;}
 
-.w_90{
-    width: 90%;
-}
+.w_90       {width: 90%;}
 
-.grey_{
-    color: #b1b1b1;
-}
+.grey_      {color: #b1b1b1;}
 
-.lightblue_{
-    color: #8edafc;
-}
+.lightblue_ {color: #8edafc;}
 
-.bg_lightblue_{
-    background-color: #8edafc;
-}
+.bg_lightblue_      {background-color: #8edafc;}
 
-.bg_grey_{
-    background-color: #b1b1b1;
-}
+.bg_grey_           {background-color: #b1b1b1;}
 
+.bg_whatsapp        {background-image: url("../../img/mine.jpg");}
 
-.bg_whatsapp{
-    background-image: url("../../img/mine.jpg");
-}
-
-.overflow_y_scroll{
-    overflow-y: scroll;
-}
+.overflow_y_scroll  {overflow-y: scroll;}
 
 /* css main */
 
-
-.h_user{
-    height: 4.25em;
-}
+.h_user     {height: 4.25em;}
 
 .user_ > img{
     width: 68px;
@@ -74,12 +47,9 @@ i{
     border-radius: 50%;
 }
 
-
 /* parte a destra */
 
-.h_messages{
-    height: calc(100% - 8.50em);
-}
+.h_messages     {height: calc(100% - 8.50em);}
 
 .h_messages >  div{
     width: 300px;
@@ -98,26 +68,18 @@ i{
     align-self: flex-start;
 }
 
+.h_write_message        {height: 4.25rem;}
 
-.h_write_message{
-    height: 4.25rem;
-}
-
-.input-group > span > i{
-    width: 50px;
-}
+.input-group > span > i {width: 50px;}
 
 /* parte a sinistra */
 
-.h_notifications{
-    height: 5rem;
-}
+.h_notifications        {height: 5rem;}
 
 .h_notifications > div.rounded-circle{
     width: 3rem;
     height: 3rem;
 }
-
 
 #contact > div{
     background-color: #fff;
@@ -125,15 +87,9 @@ i{
     cursor: pointer;
 }
 
-#contact div.col-1 small{
-    padding-bottom: 1em;
-}
+#contact div.col-1 small        {padding-bottom: 1em;}
 
-#contact > div:hover{
-    background-color: #b1b1b1;
-}
+#contact > div:hover            {background-color: #b1b1b1;}
 
-a.text-secondary ul li:hover{
-    background-color: #b1b1b1;
-}
+a.text-secondary ul li:hover    {background-color: #b1b1b1;}
 
