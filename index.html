@@ -21,25 +21,25 @@
                 <div class="col-5 bg-light m-0 p-0">
                     <div class="row  m-0">
                         <!-- lo utilizzo per la parte alta sx-->
-                            <nav class="navbar bg-light">
-                                <div class="container-fluid justify-content-between">
-                                    <div class="user_ align-items-center">
-                                        <img src="./img/avatar_io.jpg" alt="io">
-                                        <label class="ms-3"> Sofia </label>
+                        <nav class="navbar bg-light">
+                            <div class="container-fluid justify-content-between">
+                                <div class="user_ align-items-center">
+                                    <img src="./img/avatar_io.jpg" alt="io">
+                                    <label class="ms-3"> Sofia </label>
+                                </div>
+                                <div class="option_ d-flex">
+                                    <div class="option_symbol grey_ mx-2 fs-5">
+                                        <i class="fa-solid fa-circle-notch"></i>
                                     </div>
-                                    <div class="option_ d-flex">
-                                        <div class="option_symbol grey_ mx-2 fs-5">
-                                            <i class="fa-solid fa-circle-notch"></i>
-                                        </div>
-                                        <div class="option_symbol grey_ mx-2 fs-5">
-                                            <i class="fa-solid fa-message"></i>
-                                        </div>
-                                        <div class="option_symbol grey_ mx-2 fs-5">
-                                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                                        </div>
+                                    <div class="option_symbol grey_ mx-2 fs-5">
+                                        <i class="fa-solid fa-message"></i>
+                                    </div>
+                                    <div class="option_symbol grey_ mx-2 fs-5">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
                                     </div>
                                 </div>
-                            </nav>
+                            </div>
+                        </nav>
                         <!-- campana e notifiche desktop -->
                         <section class="d-flex align-items-center bg_lightblue_ p-4 h_notifications">
                             <div
@@ -58,24 +58,26 @@
                                     <i class="fa-solid fa-magnifying-glass grey_"></i>
                                 </span>
                                 <input type="text" class="form-control rounded-0 border-0 p-3"
-                                    placeholder="Cerca o inserisci una nuova chat" v-model="inputSearch" @keyUp="searchContact">
+                                    placeholder="Cerca o inserisci una nuova chat" v-model="inputSearch"
+                                    @keyUp="searchContact">
                             </div>
                         </section>
                         <!-- chat -->
                         <section id="contact" class="bg-light p-0 overflow_y_scroll">
-                            <div v-for="(contact, i) in contacts" @click="changeChat(i)" :class="getDisplayValue(i)" class="m-3">
+                            <div v-for="(contact, i) in contacts" @click="changeChat(i)" :class="getDisplayValue(i)"
+                                class="m-3">
                                 <div class="d-flex justify-content-between w_90">
                                     <div class="col-2 d-flex justify-content-center align-items-center p-1">
                                         <img :src="contact.avatar" alt="contact.name" class="rounded-circle">
                                     </div>
                                     <div class="col-9 d-flex flex-column justify-content-center fs-5">
                                         {{contact.name}}
-                                        <small
-                                            class="mt-1">{{contact.messages[contact.messages.length-1].message}}
+                                        <small class="mt-1">{{contact.messages[contact.messages.length-1].message}}
                                         </small>
                                     </div>
                                     <div class="col-1 d-flex align-items-end">
-                                        <small>{{contact.messages[contact.messages.length-1].date.slice(10, 16)}}.</small>
+                                        <small>{{contact.messages[contact.messages.length-1].date.slice(10,
+                                            16)}}.</small>
                                     </div>
                                 </div>
                             </div>
@@ -94,7 +96,8 @@
                                         <img :src="contacts[currentFriend].avatar" :alt="contacts[currentFriend].name">
                                         <div class="info_ ms-3 d-flex flex-column">
                                             <label> {{contacts[currentFriend].name}} </label>
-                                            <small class="grey_">Ultimo accesso il {{contacts[currentFriend].messages[0].date.slice(0, 10 )}}</small>
+                                            <small class="grey_">Ultimo accesso il
+                                                {{contacts[currentFriend].messages[0].date.slice(0, 10 )}}</small>
                                         </div>
                                     </div>
                                     <div class="option_ d-flex">
@@ -112,21 +115,24 @@
                             </nav>
                         </div>
                         <!-- parte dei messaggi -->
-                        <div class="overflow-y-auto h_messages p-4 d-flex flex-column">   
-                            <div class="d-flex" v-for="(chat, i) in contacts[currentFriend].messages" :class="(chat.status === 'sent') ? 'sender_' : 'recipient_'">
+                        <div class="overflow-y-auto h_messages p-4 d-flex flex-column">
+                            <div class="d-flex" v-for="(chat, i) in contacts[currentFriend].messages"
+                                :class="(chat.status === 'sent') ? 'sender_' : 'recipient_'">
                                 <span>
                                     {{chat.message}}
-                                </span> 
+                                </span>
                                 <a href="#" class="text-secondary">
-                                    <div class="h-auto dropdown-toggle me-2" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="h-auto dropdown-toggle me-2" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
                                         <ul class="dropdown-menu dropdown-menu-end">
-                                            <li @click="deleteMessage(i)" class="dropdown-item d-flex justify-content-between align-items-center">
+                                            <li @click="deleteMessage(i)"
+                                                class="dropdown-item d-flex justify-content-between align-items-center">
                                                 Elimina
                                             </li>
                                         </ul>
                                     </div>
                                 </a>
-                            </div>  
+                            </div>
                         </div>
                         <!-- scrivere il messaggio -->
                         <div class="h_write_message d-flex align-items-center">
@@ -135,7 +141,8 @@
                                     <i class="fa-regular fa-face-laugh grey_ fs-5"></i>
                                 </span>
                                 <input type="text" class="form-control border-0" placeholder="Scrivi un messaggio"
-                                    aria-label="Username" aria-describedby="basic-addon1" v-model="addMsg.message" @keyUp.enter="addMessage">
+                                    aria-label="Username" aria-describedby="basic-addon1" v-model="addMsg.message"
+                                    @keyUp.enter="addMessage">
                                 <span class="input-group-text bg-light border-0 rounded-0" id="basic-addon1">
                                     <i class="fa-solid fa-microphone grey_ fs-5"></i>
                                 </span>
@@ -144,7 +151,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
