@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" class="h_100">
         <div class="container my-3 mx-auto h_100 p-0">
             <div class="row">
                 <!-- sinistra -->
@@ -58,13 +58,12 @@
                                     <i class="fa-solid fa-magnifying-glass grey_"></i>
                                 </span>
                                 <input type="text" class="form-control rounded-0 border-0 p-3"
-                                    placeholder="Cerca o inserisci una nuova chat" aria-label="Username"
-                                    aria-describedby="addon-wrapping">
+                                    placeholder="Cerca o inserisci una nuova chat" v-model="inputSearch" @keyUp="searchContact">
                             </div>
                         </section>
                         <!-- chat -->
-                        <section id="contact" class="bg-light p-0">
-                            <div v-for="(contact, i) in contacts" @click="changeChat(i)">
+                        <section id="contact" class="bg-light p-0 overflow_y_scroll">
+                            <div v-for="(contact, i) in contacts" @click="changeChat(i)" :class="getDisplayValue(i)" class="m-3">
                                 <div class="d-flex justify-content-between w_90">
                                     <div class="col-2 d-flex justify-content-center align-items-center p-1">
                                         <img :src="contact.avatar" alt="contact.name" class="rounded-circle">

@@ -8,7 +8,7 @@
 
 body{
     background: no-repeat linear-gradient(to bottom, #009688 20%, #dbdbd2 20% 80%);
-    height: 100vh;
+    height: 100%;
 }
 
 img{
@@ -51,6 +51,10 @@ i{
 
 .bg_whatsapp{
     background-image: url("../../img/mine.jpg");
+}
+
+.overflow_y_scroll{
+    overflow-y: scroll;
 }
 
 /* css main */
@@ -114,7 +118,6 @@ i{
 #contact > div{
     background-color: #fff;
     border-top: 1px solid lightgray;
-    height: calc(100% / 8);
     cursor: pointer;
 }
 

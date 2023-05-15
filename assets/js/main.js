@@ -181,12 +181,18 @@ var currentChat;
             date: '12/05/2023 15:47:00',
             message:'ok!',
             status:'received'
-        }
+        },
+
+        inputSearch: "",
     
         
       }
     },
     methods: {
+        getDisplayValue(i) {
+            return this.contacts[i].visible ? "d-block" : "d-none"
+        },
+
         changeChat(i){  
             this.currentFriend = i;
             currentChat = this.currentFriend;
@@ -213,7 +219,13 @@ var currentChat;
             this.contacts[currentChat].messages.push(answerEl);
         },
 
-        
+        searchContact(){
+            this.contacts.forEach(element => {
+                let check = element.name.toLowerCase();
+                check = check.slice(0, this.inputSearch.length);
+                check == this.inputSearch.toLowerCase() ? element.visible = true : element.visible = false;
+            });
+        }
         
     },
 
