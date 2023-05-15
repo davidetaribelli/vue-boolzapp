@@ -170,7 +170,6 @@ var currentChat;
         ],
         currentFriend: 0,
         
-        
         addMsg: {
             date: '12/05/2023 15:47:00',
             message:'',
@@ -184,20 +183,20 @@ var currentChat;
         },
 
         inputSearch: "",
-    
-        
+      
       }
     },
     methods: {
+        // funzione per mettere il display block o none in base al contatto se visibile o meno
         getDisplayValue(i) {
             return this.contacts[i].visible ? "d-block" : "d-none"
         },
-
+        // funzione che permette di cambiare chat
         changeChat(i){  
             this.currentFriend = i;
             currentChat = this.currentFriend;
         },
-
+        // funzione che permette di aggiungere un messaggio
         addMessage(){
             if(currentChat === undefined){
                 currentChat = 0;
@@ -214,17 +213,22 @@ var currentChat;
                 
             }
         },
+        // funzione che genera una risposta
         addAnswer(){
             let answerEl = {...this.answer}
             this.contacts[currentChat].messages.push(answerEl);
         },
-
+        // cercare un contatto e far apparire solo questo nell'elenco chat
         searchContact(){
             this.contacts.forEach(element => {
                 let check = element.name.toLowerCase();
                 check = check.slice(0, this.inputSearch.length);
                 check == this.inputSearch.toLowerCase() ? element.visible = true : element.visible = false;
             });
+        },
+        // funzione per eliminare un messaggio
+        deleteMessage(i){
+            this.contacts[this.currentFriend].messages.splice(i, 1);
         }
         
     },

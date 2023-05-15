@@ -16,6 +16,10 @@ img{
     height: 100%;
 }
 
+input{
+    box-shadow: none !important;
+}
+
 i{
     cursor: pointer;
 }
@@ -126,6 +130,10 @@ i{
 }
 
 #contact > div:hover{
+    background-color: #b1b1b1;
+}
+
+a.text-secondary ul li:hover{
     background-color: #b1b1b1;
 }
 
